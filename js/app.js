@@ -1,4 +1,3 @@
-console.log("jyg");
 
 
 var player1Name="", player2Name="", turn="";
@@ -11,7 +10,7 @@ function boardMsg(x) {
 
 //setting up the turn function
 function setTurn() {
-	var r=math.floor((Math.random() *2) +1);
+	var r=Math.floor((Math.random() *2) +1);
 	hasWinner=0;
 	if(r==1) {
 		turn = player1Name;
@@ -59,15 +58,17 @@ $(".col").click(function (){
 	var row=$(this).parent().index;
 	var col=$(this).index();
 
-	if(grid[row][col]!==0) {
-		alert("Position taken. Try again.");
-		return;
-	}
+	//console.log("it's still working!");
+	//if(grid[row][col]!=0) {
+		//alert("Position taken. Try again.");
+		//return;
+	//}
+	console.log("it's still still working");
 	if (hasWinner==1){
 		alert("Do you want to try your luck again");
 		return;
 	}
-	if (turn==player1Name) {
+	if (turn===player1Name) {
 		moveCount++;
 		$(this).text("O");
 		grid[row][col]=1;
