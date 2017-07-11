@@ -71,7 +71,7 @@ $(".col").click(function (){
 	if (turn===player1Name) {
 		moveCount++;
 		$(this).text("O");
-		grid[row][col]=1;
+		//grid[row][col]=1;
 		var ifWin = winnerCheck(1,player1Name);
 		if(!ifWin) {
 			if(moveCount>=9) {
@@ -93,7 +93,7 @@ $(".col").click(function (){
 	else if (turn==player2Name) {
 		moveCount++;
 		$(this).text("X");
-		grid[row][col] = 2;
+		//grid[row][col] = 2;
 		var ifWn = winnerCheck(2,player2Name);
 		if (!ifWin) {
 			if (moveCount>=9) {
@@ -104,7 +104,7 @@ $(".col").click(function (){
 				return;
 			} else {
 				turn = player1Name;
-				boardMsd(player1Name+" Your Turn");
+				boardMsg(player1Name+" Your Turn");
 			}
 			return;
 		}
