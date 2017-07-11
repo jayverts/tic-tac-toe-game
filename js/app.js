@@ -57,12 +57,12 @@ $(".col").click(function (){
 
 	var row=$(this).parent().index;
 	var col=$(this).index();
+	$(this).unbind("click");
+	// if(grid[row][col]!=0) {
+	// alert("Position taken. Try again.");
+	// return;
+	// }
 
-	//console.log("it's still working!");
-	//if(grid[row][col]!=0) {
-		//alert("Position taken. Try again.");
-		//return;
-	//}
 	console.log("it's still still working");
 	if (hasWinner==1){
 		alert("Do you want to try your luck again");
@@ -112,6 +112,8 @@ $(".col").click(function (){
 			return;
 		}
 	}
+
+
 });
 
 function winnerCheck(n,playerName){
